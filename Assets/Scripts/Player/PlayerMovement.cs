@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
   }
 
   void Update () {
-    float inputX = Input.GetKey("Horizontal");
-    float inputY = Input.GetKey("Horizontal");
+    float inputX = Input.GetAxis("Horizontal");
+    float inputY = Input.GetAxis("Horizontal");
   }
 }
