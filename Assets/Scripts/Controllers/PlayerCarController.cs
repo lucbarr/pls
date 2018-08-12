@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerCarController : MonoBehaviour {
   bool driving;
@@ -17,16 +15,25 @@ public class PlayerCarController : MonoBehaviour {
       if (driving) {
         player.transform.parent = null;
         player.SetActive(true);
+
         car.GetComponent<CarMovement>().enabled = false;
+
+        if (car.GetComponent<Car>().deliveryReady) {
+          //Debug.Log("Entregando carro");
+          Destroy(car);
+        }
         car = null;
 
         driving = false;
       } else {
         car = player.GetComponent<CarInteraction>().GetCar();
+
         if (car) {
           player.transform.SetParent(car.transform);
           player.SetActive(false);
+
           car.GetComponent<CarMovement>().enabled = true;
+          car.GetComponent<CarAutoPilot>().enabled = false;
 
           driving = true;
         }

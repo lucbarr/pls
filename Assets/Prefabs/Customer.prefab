@@ -9,68 +9,70 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1364226418241386}
+  m_RootGameObject: {fileID: 1606864906406748}
   m_IsPrefabAsset: 1
---- !u!1 &1364226418241386
+--- !u!1 &1606864906406748
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4706685576344010}
-  - component: {fileID: 212526848522168830}
-  - component: {fileID: 50543456623206952}
-  - component: {fileID: 61627355737604986}
-  - component: {fileID: 114990852786576874}
-  - component: {fileID: 114039413543990924}
-  - component: {fileID: 61808003507713872}
+  - component: {fileID: 4152604079615696}
+  - component: {fileID: 212529948483734542}
+  - component: {fileID: 50919767399264824}
+  - component: {fileID: 61920134428207666}
+  - component: {fileID: 95551531103987746}
   m_Layer: 0
-  m_Name: HotDogVan-GTA2
-  m_TagString: Car
+  m_Name: Customer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4706685576344010
+--- !u!4 &4152604079615696
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364226418241386}
+  m_GameObject: {fileID: 1606864906406748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD:Assets/Prefabs/HotDogVan-GTA2.prefab
   m_LocalPosition: {x: 0.43, y: -1.35, z: 0}
+=======
+  m_LocalPosition: {x: 1.224, y: -0.776, z: 0}
+>>>>>>> 7fa57503af4146e5d0c9be9b0c6f692cf9eaf2a8:Assets/Prefabs/Customer.prefab
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50543456623206952
+--- !u!50 &50919767399264824
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364226418241386}
+  m_GameObject: {fileID: 1606864906406748}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 10
-  m_AngularDrag: 500
+  m_Mass: 0.05
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61627355737604986
+  m_Constraints: 4
+--- !u!61 &61920134428207666
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364226418241386}
+  m_GameObject: {fileID: 1606864906406748}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -81,15 +83,16 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2578125, y: 0.50390625}
-    newSize: {x: 2.015625, y: 1.03125}
+    oldSize: {x: 0.125, y: 0.125}
+    newSize: {x: 0.25, y: 0.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2578125, y: 0.50390625}
+  m_Size: {x: 0.098002434, y: 0.035007954}
   m_EdgeRadius: 0
+<<<<<<< HEAD:Assets/Prefabs/HotDogVan-GTA2.prefab
 --- !u!61 &61808003507713872
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -117,35 +120,32 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!114 &114039413543990924
 MonoBehaviour:
+=======
+--- !u!95 &95551531103987746
+Animator:
+  serializedVersion: 3
+>>>>>>> 7fa57503af4146e5d0c9be9b0c6f692cf9eaf2a8:Assets/Prefabs/Customer.prefab
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364226418241386}
+  m_GameObject: {fileID: 1606864906406748}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cde967116072d45938878ea8094820f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sideDrag: 20
---- !u!114 &114990852786576874
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364226418241386}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d70dc670572234e69989145e264db177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  turnSpeed: 100
---- !u!212 &212526848522168830
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21cf80762fb34e140bb34b4b8f6863b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &212529948483734542
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364226418241386}
+  m_GameObject: {fileID: 1606864906406748}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -172,15 +172,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1520686083
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf1842382d8dc40e18dbefac53d220ca, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0128c50431a9543398c86c13d2e1ca3c, type: 3}
+  m_Color: {r: 0.45323068, g: 0.5223574, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.015625, y: 1.03125}
+  m_Size: {x: 0.25, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
