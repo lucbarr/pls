@@ -4,7 +4,8 @@ public class CarAutoPilot : MonoBehaviour {
   public float duration;
   public float accelDuration = 0.5f;
 
-  public float stopDistance = 0.3f;
+  public float reactionDistance = 0.5f;
+  public float stopDistance = 0.1f;
   public LayerMask stopMask;
 
   public Transform[] frontPoints;
@@ -18,20 +19,27 @@ public class CarAutoPilot : MonoBehaviour {
     spline = GameObject.FindWithTag("CarQueue").GetComponent<BezierSpline>();
   }
 
-  bool canMove() {
+  void UpdateAccel() {
+    float minDist = 2*reactionDistance + stopDistance;
+
     RaycastHit2D hit;
 
     foreach (var point in frontPoints) {
-      hit = Physics2D.Raycast(point.position, point.up, stopDistance, stopMask);
-      if (hit.collider != null)
-        return false;
+      hit = Physics2D.Raycast(point.position, point.up, minDist, stopMask);
+      if (hit.collider != null) {
+        minDist = Mathf.Min(minDist, hit.distance);
+      }
     }
 
-    return true;
+    minDist -= stopDistance;
+
+    accel = minDist < 0f ?
+      0f :
+      Mathf.Clamp01(accel + (minDist > reactionDistance ? 1 : -1) * Time.deltaTime / accelDuration);
   }
 
   void Update () {
-    accel = Mathf.Clamp01(accel + (canMove() ? 1 : -1) * Time.deltaTime / accelDuration);
+    UpdateAccel();
 
     progress += accel * Time.deltaTime / duration;
     if (progress > 1f) {
