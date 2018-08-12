@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
@@ -10,6 +12,7 @@ public class CarGenerator : MonoBehaviour {
 	public Queue<String> availableIDS;
 	private int queueSize;
 	public GameObject carPrefab;
+	public const int MAXSIZE = 10;
 
 	void Start () {
 		availableIDS = new Queue<string>();
@@ -39,13 +42,15 @@ public class CarGenerator : MonoBehaviour {
 	}
 
 	String getCar() {
-		if (availableIDS.Count() == 0) return null;
+		if (!availableIDS.Any()) return null;
+		if (GetComponentInParent<CarQueue>().Count() >= MAXSIZE) return null;
 		return availableIDS.Dequeue();
 	}
 	void removeCar(String ID) {
 		availableIDS.Enqueue(ID);
 	}
 	IEnumerator SpawnCar() {
+		yield return new WaitForSeconds(5);
 		while (true) {
 			String newID = getCar();
 
@@ -53,9 +58,10 @@ public class CarGenerator : MonoBehaviour {
 
 			GameObject car = (GameObject) Instantiate(carPrefab, transform.position, transform.rotation);
 			car.GetComponent<Car>().SetID(newID);
+			car.GetComponent<CarAutoPilot>().enabled = true;
 
 			GetComponentInParent<CarQueue>().AddCar(car);
-			yield return new WaitForSeconds(20);
+			yield return new WaitForSeconds(5);
 		}
 	}
 }
