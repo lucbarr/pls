@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CarMovement : MonoBehaviour {
   public float speed     = 1f;//velocidade de aceleração/freio
@@ -30,7 +28,8 @@ public class CarMovement : MonoBehaviour {
 
   private void Turn() {
     float moveProp = Mathf.Clamp01(rb.velocity.magnitude);
-    float turn = moveProp * turnSpeed * movHorizontal * Mathf.Sign(movVertical) * Time.deltaTime;
+    float sign = Mathf.Sign(transform.InverseTransformVector(rb.velocity).y);
+    float turn = moveProp * turnSpeed * movHorizontal * sign * Time.deltaTime;
     rb.MoveRotation (rb.rotation - turn);
   }
 }

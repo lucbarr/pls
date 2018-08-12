@@ -32,14 +32,4 @@ public class PlayerMovement : MonoBehaviour {
       rb.velocity = Vector2.zero;
     }
   }
-
-  public void Drive() {
-    spriteRenderer.enabled = false;
-    this.enabled = false;
-  }
-
-  public void Walk() {
-    spriteRenderer.enabled = true;
-    this.enabled = true;
-  }
 }
