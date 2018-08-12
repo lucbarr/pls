@@ -9,10 +9,13 @@ public class CarMoviment : MonoBehaviour {
 	float movVertical;
 	float movHorizontal;
 	private Rigidbody2D carrb;
+	public GameObject player;
+	GameObject car;
 	// Use this for initialization
 	void Start () 
 	{
 		carrb = GetComponent<Rigidbody2D>();
+		car = GetComponent<GameObject>();
 	}
 	
 	// Update is called once per frame
@@ -23,6 +26,12 @@ public class CarMoviment : MonoBehaviour {
 		Move ();
 		Turn();
 		SideDrag();
+		if(Input.GetKeyUp("space"))
+		{
+			player.gameObject.SetActive(true);
+			this.GetComponent<CarMoviment>().enabled = false;
+			player.transform.parent = null;
+		}
 		
 		//Turn ();
 		//Vector2 mov = new Vector2(movHorizontal,movvertical); 
