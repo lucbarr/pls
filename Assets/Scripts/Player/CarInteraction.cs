@@ -10,7 +10,7 @@ public class CarInteraction : MonoBehaviour {
   }
 
   public GameObject GetCar() {
-    if (carList.Count == 0)
+    if(carList.Count == 0)
       return null;
     return carList[0];
   }
