@@ -27,8 +27,8 @@ public class CarGenerator : MonoBehaviour {
 		var rnd = new System.Random();
 		available = available.OrderBy(item => rnd.Next()).ToList();
 
-		foreach (var VARIABLE in available) {
-			availableIDS.Enqueue(VARIABLE);
+		foreach (var variable in available) {
+			availableIDS.Enqueue(variable);
 		}
 
 		StartCoroutine(SpawnCar());
@@ -47,13 +47,15 @@ public class CarGenerator : MonoBehaviour {
 	}
 	IEnumerator SpawnCar() {
 		while (true) {
-			yield return new WaitForSeconds(5);
 			String newID = getCar();
 
 			if (newID == null) continue;
 
 			GameObject car = (GameObject) Instantiate(carPrefab, transform.position, transform.rotation);
-			car.GetComponent<CarID>().SetID(newID);
+			car.GetComponent<Car>().SetID(newID);
+
+			GetComponentInParent<CarQueue>().AddCar(car);
+			yield return new WaitForSeconds(20);
 		}
 	}
 }

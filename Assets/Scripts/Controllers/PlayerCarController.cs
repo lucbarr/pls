@@ -18,6 +18,11 @@ public class PlayerCarController : MonoBehaviour {
         player.transform.parent = null;
         player.SetActive(true);
         car.GetComponent<CarMovement>().enabled = false;
+
+        if (car.GetComponent<Car>().deliveryReady) {
+          Debug.Log("Entregando carro");
+          Destroy(car);
+        }
         car = null;
 
         driving = false;
