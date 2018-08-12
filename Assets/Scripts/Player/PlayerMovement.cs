@@ -4,10 +4,12 @@ public class PlayerMovement : MonoBehaviour {
   public float speed = 1f;
 
   Rigidbody2D rb;
+  SpriteRenderer spriteRenderer;
   Animator anim;
 
   void Start () {
     rb = GetComponent<Rigidbody2D>();
+    spriteRenderer = GetComponent<SpriteRenderer>();
     anim = GetComponent<Animator>();
   }
 
@@ -29,5 +31,15 @@ public class PlayerMovement : MonoBehaviour {
     } else {
       rb.velocity = Vector2.zero;
     }
+  }
+
+  public void Drive() {
+    spriteRenderer.enabled = false;
+    this.enabled = false;
+  }
+
+  public void Walk() {
+    spriteRenderer.enabled = true;
+    this.enabled = true;
   }
 }
