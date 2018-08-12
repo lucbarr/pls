@@ -51,3 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deb02b99e34a43679a5d5fb8e6fe1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carGenerator: {fileID: 0}
