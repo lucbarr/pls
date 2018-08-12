@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CarInteraction : MonoBehaviour {
+  List<GameObject> carList;
 
-	CircleCollider2D coll;
-	public GameObject car;
-	// Use this for initialization
-	void Start () 
-	{
-		coll = GetComponent<CircleCollider2D>();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
+  void Start() {
+    carList = new List<GameObject>();
+  }
 
-	}
-	void OnTriggerStay2D(Collider2D coll)
-	{
-		if(coll.gameObject.tag == "Car_Door")
-		{
-			if(Input.GetKeyUp("space"))
-			{
-				this.gameObject.SetActive(false);
-				car.GetComponent<CarMoviment>().enabled = true;
-				this.transform.parent = car.transform;
-			}
-		}
-	}
+  public GameObject GetCar() {
+    if (carList.Count == 0)
+      return null;
+    return carList[0];
+  }
+
+  void OnDisable() {
+    carList.Clear();
+  }
+
+  void OnTriggerEnter2D(Collider2D coll) {
+    if (coll.CompareTag("Car") && !carList.Contains(coll.gameObject)) {
+      carList.Add(coll.gameObject);
+    }
+  }
+
+  void OnTriggerExit2D(Collider2D coll) {
+    if (coll.CompareTag("Car") && carList.Contains(coll.gameObject)) {
+      carList.Remove(coll.gameObject);
+    }
+  }
 }
