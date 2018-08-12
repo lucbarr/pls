@@ -40,7 +40,7 @@ public class ScoreController : MonoBehaviour {
 		}
 	}
 
-	public void Bateu()
+	public void Bateu()//errando
 	{
 		if(colisao == true && score > 0)
 		{
