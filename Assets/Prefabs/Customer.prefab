@@ -37,7 +37,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606864906406748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD:Assets/Prefabs/HotDogVan-GTA2.prefab
+  m_LocalPosition: {x: 0.43, y: -1.35, z: 0}
+=======
   m_LocalPosition: {x: 1.224, y: -0.776, z: 0}
+>>>>>>> 7fa57503af4146e5d0c9be9b0c6f692cf9eaf2a8:Assets/Prefabs/Customer.prefab
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,9 +92,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.098002434, y: 0.035007954}
   m_EdgeRadius: 0
+<<<<<<< HEAD:Assets/Prefabs/HotDogVan-GTA2.prefab
+--- !u!61 &61808003507713872
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1364226418241386}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2578125, y: 0.50390625}
+    newSize: {x: 2.015625, y: 1.03125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2578125, y: 0.50390625}
+  m_EdgeRadius: 0
+--- !u!114 &114039413543990924
+MonoBehaviour:
+=======
 --- !u!95 &95551531103987746
 Animator:
   serializedVersion: 3
+>>>>>>> 7fa57503af4146e5d0c9be9b0c6f692cf9eaf2a8:Assets/Prefabs/Customer.prefab
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}

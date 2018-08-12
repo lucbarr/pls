@@ -3,59 +3,72 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UnityEditor;
 using UnityEngine;
 
 public class CarGenerator : MonoBehaviour {
-	public Queue<String> availableIDS;
-	private int queueSize;
-	public GameObject carPrefab;
+  public Queue<String> availableIDS;
+  public List<GameObject> carQueue;
 
-	void Start () {
-		availableIDS = new Queue<string>();
-		List<String> available = new List<String>();
+  public GameObject carPrefab;
+  public const int MAXSIZE = 10;
 
-		for (char i = 'A'; i <= 'Z'; i++) {
-			for (char j = 'A'; j <= 'Z'; j++) {
-		var builder = new StringBuilder();
-				builder.Append(i);
-				builder.Append(j);
-				available.Add(builder.ToString());
-			}
-		}
+  public float startDelay = 1f;
+  public float spawnDelay = 5f;
 
-		var rnd = new System.Random();
-		available = available.OrderBy(item => rnd.Next()).ToList();
+  void Start () {
+    availableIDS = new Queue<String>();
+    carQueue = new List<GameObject>();
 
-		foreach (var variable in available) {
-			availableIDS.Enqueue(variable);
-		}
+    List<String> available = new List<String>();
 
-		StartCoroutine(SpawnCar());
-	}
-	
-	void Update () {
+    for (char i = 'A'; i <= 'Z'; i++) {
+      for (char j = 'A'; j <= 'Z'; j++) {
+        var builder = new StringBuilder();
+        builder.Append(i);
+        builder.Append(j);
+        available.Add(builder.ToString());
+      }
+    }
 
-	}
+    var rnd = new System.Random();
+    available = available.OrderBy(item => rnd.Next()).ToList();
 
-	String getCar() {
-		if (availableIDS.Count() == 0) return null;
-		return availableIDS.Dequeue();
-	}
-	void removeCar(String ID) {
-		availableIDS.Enqueue(ID);
-	}
-	IEnumerator SpawnCar() {
-		while (true) {
-			String newID = getCar();
+    foreach (var variable in available) {
+      availableIDS.Enqueue(variable);
+    }
 
-			if (newID == null) continue;
+    StartCoroutine(SpawnCar());
+  }
 
-			GameObject car = (GameObject) Instantiate(carPrefab, transform.position, transform.rotation);
-			car.GetComponent<Car>().SetID(newID);
+  String GetCar() {
+    if (!availableIDS.Any()) return null;
+    if (carQueue.Count >= MAXSIZE) return null;
 
-			GetComponentInParent<CarQueue>().AddCar(car);
-			yield return new WaitForSeconds(20);
-		}
-	}
+    return availableIDS.Dequeue();
+  }
+
+  void removeCar(String id) {
+    availableIDS.Enqueue(id);
+  }
+
+  IEnumerator SpawnCar() {
+    yield return new WaitForSeconds(startDelay);
+    while (true) {
+      String newID = GetCar();
+
+      if (newID != null) {
+
+        GameObject car = (GameObject) Instantiate(carPrefab, transform.position, transform.rotation);
+        car.GetComponent<Car>().SetID(newID);
+        carQueue.Add(car);
+      }
+
+      yield return new WaitForSeconds(spawnDelay);
+
+    }
+  }
+
+  public void RemoveCarFromQueue(GameObject car) {
+    carQueue.Remove(car);
+  }
 }
