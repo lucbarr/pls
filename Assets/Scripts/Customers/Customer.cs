@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Car : MonoBehaviour {
+public class Customer : MonoBehaviour {
+
 	public Text id;
 	public Boolean deliveryReady;
-	public GameObject customer;
 
 	public String GetID() {
 		return id.text;
@@ -18,8 +15,4 @@ public class Car : MonoBehaviour {
 		id.text = id_;
 		deliveryReady = false;
 	}
-	
-	void Update () {
-	}
-
 }
