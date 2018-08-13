@@ -534,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 114320298893699234}
   fill: {fileID: 114219165719407932}
-  duration: 30
+  duration: 100
 --- !u!114 &114814594849313810
 MonoBehaviour:
   m_ObjectHideFlags: 1
