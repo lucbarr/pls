@@ -4,12 +4,14 @@ public class PlayerCarController : MonoBehaviour {
   bool driving;
 
   CarGenerator carGenerator;
+  ParkedCars parkedCars;
   GameObject player;
   GameObject car;
 
   void Start() {
     player = GameObject.FindWithTag("Player");
     carGenerator = GameObject.FindWithTag("CarGenerator").GetComponent<CarGenerator>();
+    parkedCars = GameObject.FindWithTag("CustomerGenerator").GetComponent<ParkedCars>();
   }
 
   void Update() {
@@ -18,9 +20,12 @@ public class PlayerCarController : MonoBehaviour {
         player.transform.parent = null;
         player.SetActive(true);
 
+        Car carComponent = car.GetComponent<Car>();
+
         car.GetComponent<CarMovement>().enabled = false;
 
-        if (car.GetComponent<Car>().deliveryReady) {
+        if (carComponent.deliveryReady && carComponent.customer != null) {
+          Destroy(carComponent.customer);
           Destroy(car);
         }
         car = null;
@@ -37,8 +42,8 @@ public class PlayerCarController : MonoBehaviour {
           if (car.GetComponent<CarAutoPilot>().enabled) {
             car.GetComponent<CarAutoPilot>().enabled = false;
             carGenerator.RemoveCarFromQueue(car);
+            parkedCars.Add(car);
           }
-
 
           driving = true;
         }

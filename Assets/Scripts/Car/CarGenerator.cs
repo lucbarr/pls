@@ -9,7 +9,8 @@ public class CarGenerator : MonoBehaviour {
   public Queue<String> availableIDS;
   public List<GameObject> carQueue;
 
-  public GameObject carPrefab;
+  public List<GameObject> carPrefabs;
+  public AnimationCurve distribution;
   public const int MAXSIZE = 10;
 
   public float startDelay = 1f;
@@ -57,8 +58,8 @@ public class CarGenerator : MonoBehaviour {
       String newID = GetCar();
 
       if (newID != null) {
-
-        GameObject car = (GameObject) Instantiate(carPrefab, transform.position, transform.rotation);
+        int id = (int) ((float) carPrefabs.Count * distribution.Evaluate(UnityEngine.Random.value));
+        GameObject car = (GameObject) Instantiate(carPrefabs[id], transform.position, transform.rotation);
         car.GetComponent<Car>().SetID(newID);
         carQueue.Add(car);
       }

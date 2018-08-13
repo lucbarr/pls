@@ -4,10 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Score Controller
+  - Undefined
+  - CarGenerator
   - Car
   - CarQueue
-  - CarGenerator
+  - Score Controller
+  - CustomerQueue
+  - CustomerGenerator
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Units
   - Sidestep
   - Walls
-  - 
+  - Customer
   - 
   - 
   - 
@@ -46,14 +49,14 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 1476409369
+    uniqueID: 1435066445
     locked: 0
-  - name: Middleground
-    uniqueID: 767785895
+  - name: MiddleGround
+    uniqueID: 20307583
     locked: 0
   - name: Foreground
-    uniqueID: 3238329113
+    uniqueID: 239923647
     locked: 0
   - name: UI
-    uniqueID: 2614141071
+    uniqueID: 4050956923
     locked: 0

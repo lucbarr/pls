@@ -47,7 +47,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1806522840711570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 672e02dde0da6fd4295c35aa5ccfd6e0, type: 3}
   m_Name: 
@@ -64,6 +64,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carQueue: []
-  carPrefab: {fileID: 1364226418241386, guid: 7a2723242b122104b9521ddd9b74c648, type: 2}
-  startDelay: 1
+  carPrefabs:
+  - {fileID: 1364226418241386, guid: 0898317ca54a6884c95ade7ebf205e59, type: 2}
+  - {fileID: 1364226418241386, guid: 7a2723242b122104b9521ddd9b74c648, type: 2}
+  - {fileID: 1364226418241386, guid: 65eb4fef8e30c65468bc2ddda3bd86dd, type: 2}
+  distribution:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5783051
+      value: 0.2661485
+      inSlope: 1.1407255
+      outSlope: 1.1407255
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startDelay: 5
   spawnDelay: 5
