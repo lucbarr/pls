@@ -11,6 +11,7 @@ TagManager:
   - Score Controller
   - CustomerQueue
   - CustomerGenerator
+  - Customer
   layers:
   - Default
   - TransparentFX

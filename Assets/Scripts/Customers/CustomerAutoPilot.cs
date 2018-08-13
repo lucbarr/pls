@@ -37,10 +37,16 @@ public class CustomerAutoPilot : MonoBehaviour {
       progress += Time.deltaTime / duration;
       if (progress > 1f) {
         progress = 1f;
+        anim.SetBool("isIdle", true);
+      } else {
+        anim.SetBool("isIdle", false);
       }
+    } else {
+      anim.SetBool("isIdle", true);
     }
 
     Vector3 position = spline.GetPoint(progress);
+    Vector3 delta = position - transform.localPosition;
     transform.localPosition = position;
 
     Vector3 target = position + spline.GetDirection(progress);
@@ -48,13 +54,15 @@ public class CustomerAutoPilot : MonoBehaviour {
     diff.Normalize();
     float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
     transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-    
+
+    /*
     const float eps = 0.1f;
-    float modx = Mathf.Abs(diff.x);
-    float mody = Mathf.Abs(diff.y);
+    float modx = Mathf.Abs(delta.x);
+    float mody = Mathf.Abs(delta.y);
     bool tilted = ( modx > eps && mody > eps );
     bool idle   = ( modx <= eps && mody <= eps );
     anim.SetBool("isTilted", tilted);
     anim.SetBool("isIdle", idle);
+    */
   }
 }
