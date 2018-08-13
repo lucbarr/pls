@@ -43,6 +43,7 @@ public class PlayerCarController : MonoBehaviour {
             car.GetComponent<CarAutoPilot>().enabled = false;
             carGenerator.RemoveCarFromQueue(car);
             parkedCars.Add(car);
+            car.GetComponent<CarSlider>().enabled = false;
           }
 
           driving = true;

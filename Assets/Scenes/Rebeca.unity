@@ -250,16 +250,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114792388978765426, guid: 79d264e35ed90c548b1793bd8e09a123,
-        type: 2}
-      propertyPath: customerPrefab
-      value: 
-      objectReference: {fileID: 1703703524843462, guid: 3c74589a070e67842ab63c9b3a6b4350,
-        type: 2}
-    - target: {fileID: 1129361580758336, guid: 79d264e35ed90c548b1793bd8e09a123, type: 2}
-      propertyPath: m_TagString
-      value: CustomerGenerator
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d264e35ed90c548b1793bd8e09a123, type: 2}
   m_IsPrefabAsset: 0
@@ -316,6 +306,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529521556087996, guid: 5d0c9fdbbc8f54bafb91052b1f641250, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0c9fdbbc8f54bafb91052b1f641250, type: 2}
@@ -555,23 +549,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43a74255f458b244998c1ddf212dce15, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1696298830 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1129361580758336, guid: 79d264e35ed90c548b1793bd8e09a123,
+--- !u!114 &1696298833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114756016859490258, guid: 79d264e35ed90c548b1793bd8e09a123,
     type: 2}
   m_PrefabInternal: {fileID: 603326563}
---- !u!114 &1696298833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1696298830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c70f3912306f3846900ed91bb7d7ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parkedCars: []
 --- !u!1001 &1881206436
 Prefab:
   m_ObjectHideFlags: 0
@@ -614,6 +597,11 @@ Prefab:
     - target: {fileID: 1849812263868738, guid: 8278ff6700bb24ee385740ac481401e7, type: 2}
       propertyPath: m_Name
       value: Score Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 224355472006518090, guid: 8278ff6700bb24ee385740ac481401e7,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8278ff6700bb24ee385740ac481401e7, type: 2}

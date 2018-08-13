@@ -6,6 +6,8 @@ using UnityEngine;
 public class ParkedCars : MonoBehaviour {
 	public List<GameObject> parkedCars;
 
+	public float waitDelay = 10;
+
 	void Start () {
 		parkedCars = new List<GameObject>();
 	}
@@ -22,6 +24,12 @@ public class ParkedCars : MonoBehaviour {
 	}
 
 	public void Add(GameObject car) {
+		StartCoroutine(WaitAndAddCar(car));
+	}
+
+	public IEnumerator WaitAndAddCar(GameObject car) {
+    yield return new WaitForSeconds(waitDelay);
 		parkedCars.Add(car);
+		yield return null;
 	}
 }
