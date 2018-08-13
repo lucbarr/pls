@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114390448883788510}
   m_Layer: 0
   m_Name: CarGenerator
-  m_TagString: Untagged
+  m_TagString: CarGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,4 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38547da574c2002489b763923108ccd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carQueue: []
   carPrefab: {fileID: 1364226418241386, guid: 7a2723242b122104b9521ddd9b74c648, type: 2}
+  startDelay: 1
+  spawnDelay: 5
