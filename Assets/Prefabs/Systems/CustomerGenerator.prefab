@@ -9,46 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1581399704635916}
+  m_RootGameObject: {fileID: 1129361580758336}
   m_IsPrefabAsset: 1
---- !u!1 &1581399704635916
+--- !u!1 &1129361580758336
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4978912941618824}
-  - component: {fileID: 114064721284120414}
+  - component: {fileID: 4467244546212014}
+  - component: {fileID: 114792388978765426}
   m_Layer: 0
-  m_Name: Player Car Controller
+  m_Name: CustomerGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4978912941618824
+--- !u!4 &4467244546212014
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1581399704635916}
+  m_GameObject: {fileID: 1129361580758336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.63649356, y: -0.5782855, z: -9.815042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114064721284120414
+--- !u!114 &114792388978765426
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1581399704635916}
+  m_GameObject: {fileID: 1129361580758336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4deb02b99e34a43679a5d5fb8e6fe1b3, type: 3}
+  m_Script: {fileID: 11500000, guid: a3b35c557ea26154e87945109ee39f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carGenerator: {fileID: 0}
+  parkedCars: {fileID: 0}
+  customerPrefab: {fileID: 0}
+  startDelay: 1
+  spawnDelay: 5
