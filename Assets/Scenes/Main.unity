@@ -113,23 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &32368952 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1129361580758336, guid: 79d264e35ed90c548b1793bd8e09a123,
-    type: 2}
-  m_PrefabInternal: {fileID: 642497840}
---- !u!114 &32368953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 32368952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c70f3912306f3846900ed91bb7d7ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parkedCars: []
 --- !u!1001 &144720308
 Prefab:
   m_ObjectHideFlags: 0
@@ -395,7 +378,7 @@ Prefab:
         type: 2}
       propertyPath: parkedCars
       value: 
-      objectReference: {fileID: 32368953}
+      objectReference: {fileID: 642497841}
     - target: {fileID: 114792388978765426, guid: 79d264e35ed90c548b1793bd8e09a123,
         type: 2}
       propertyPath: customerPrefab
@@ -419,6 +402,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d264e35ed90c548b1793bd8e09a123, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &642497841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114756016859490258, guid: 79d264e35ed90c548b1793bd8e09a123,
+    type: 2}
+  m_PrefabInternal: {fileID: 642497840}
+  m_Script: {fileID: 11500000, guid: 3c70f3912306f3846900ed91bb7d7ef8, type: 3}
 --- !u!1001 &1153313288
 Prefab:
   m_ObjectHideFlags: 0
