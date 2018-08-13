@@ -11,8 +11,13 @@ public class CustomerAutoPilot : MonoBehaviour {
   public Transform frontPoint;
 
   BezierSpline spline;
+  public Animator anim;
 
   float progress;
+
+  public void StartAnimator(){
+    anim = GetComponent<Animator>();
+  }
 
   void Start() {
     spline = GameObject.FindWithTag("CustomerQueue").GetComponent<BezierSpline>();
@@ -43,5 +48,13 @@ public class CustomerAutoPilot : MonoBehaviour {
     diff.Normalize();
     float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
     transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+    
+    const float eps = 0.1f;
+    float modx = Mathf.Abs(diff.x);
+    float mody = Mathf.Abs(diff.y);
+    bool tilted = ( modx > eps && mody > eps );
+    bool idle   = ( modx <= eps && mody <= eps );
+    anim.SetBool("isTilted", tilted);
+    anim.SetBool("isIdle", idle);
   }
 }
