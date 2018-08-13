@@ -244,7 +244,7 @@ MonoBehaviour:
   stopDistance: 0.1
   stopMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4096
   frontPoint: {fileID: 4332585195214796}
 --- !u!114 &114929523912885446
 MonoBehaviour:
