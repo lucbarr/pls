@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parkedCars: []
+  waitDelay: 10
 --- !u!114 &114792388978765426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,5 +68,10 @@ MonoBehaviour:
   parkedCars: {fileID: 114756016859490258}
   customerPrefab: {fileID: 1703703524843462, guid: 3c74589a070e67842ab63c9b3a6b4350,
     type: 2}
+  customerAnimators:
+  - {fileID: 9100000, guid: 7ef8f936b2bb1354791ae43b3b8a2228, type: 2}
+  - {fileID: 9100000, guid: 494fdcf408ba7fe468ca7766f505f882, type: 2}
+  - {fileID: 9100000, guid: 79a0822536b040f4f9d21a4f3104ecbd, type: 2}
+  - {fileID: 9100000, guid: e758887f629c85a46ac9e060d890a8fc, type: 2}
   startDelay: 20
   spawnDelay: 10

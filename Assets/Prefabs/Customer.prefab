@@ -162,9 +162,9 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1703703524843462}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21cf80762fb34e140bb34b4b8f6863b7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7ef8f936b2bb1354791ae43b3b8a2228, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -246,6 +246,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   frontPoint: {fileID: 4332585195214796}
+  anim: {fileID: 95958423140749314}
 --- !u!114 &114929523912885446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,7 +312,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0128c50431a9543398c86c13d2e1ca3c, type: 3}
-  m_Color: {r: 0.2862643, g: 0.27020293, b: 0.8301887, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
