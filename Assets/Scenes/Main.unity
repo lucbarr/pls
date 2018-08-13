@@ -553,7 +553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1483533906108782, guid: 2d1bccf034ba14d7cb4a6706da35c9ae, type: 2}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4660531533791792, guid: 2d1bccf034ba14d7cb4a6706da35c9ae, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
