@@ -14,7 +14,6 @@ public class CarMovement : MonoBehaviour {
   void Start () {
     rb = GetComponent<Rigidbody2D>();
     scoreController = GameObject.FindWithTag("Score Controller").GetComponent<ScoreController>();
-    Debug.Log("Start: " + gameObject.name + " : " + (scoreController!=null));
   }
 
   void Update () {
