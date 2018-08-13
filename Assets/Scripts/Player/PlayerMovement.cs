@@ -4,12 +4,10 @@ public class PlayerMovement : MonoBehaviour {
   public float speed = 1f;
 
   Rigidbody2D rb;
-  SpriteRenderer spriteRenderer;
   Animator anim;
 
   void Start () {
     rb = GetComponent<Rigidbody2D>();
-    spriteRenderer = GetComponent<SpriteRenderer>();
     anim = GetComponent<Animator>();
   }
 

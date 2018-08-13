@@ -199,6 +199,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114758952994427856, guid: da94c10fcf8a67b4e84e5157af86e313,
+        type: 2}
+      propertyPath: startDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114758952994427856, guid: da94c10fcf8a67b4e84e5157af86e313,
+        type: 2}
+      propertyPath: spawnDelay
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da94c10fcf8a67b4e84e5157af86e313, type: 2}
   m_IsPrefabAsset: 0
@@ -291,7 +301,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4209158303296982, guid: 5d0c9fdbbc8f54bafb91052b1f641250, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4209158303296982, guid: 5d0c9fdbbc8f54bafb91052b1f641250, type: 2}
       propertyPath: m_LocalPosition.z

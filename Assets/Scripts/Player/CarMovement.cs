@@ -1,16 +1,20 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class CarMovement : MonoBehaviour {
-  public float speed     = 1f;//velocidade de aceleração/freio
-  public float turnSpeed = 1f;//velocidade de giro
+  public float speed     = 1f;
+  public float turnSpeed = 1f;
+  public float nota;
 
   float movVertical;
   float movHorizontal;
 
-  private Rigidbody2D rb;
+  Rigidbody2D rb;
+  ScoreController scoreController;
 
   void Start () {
     rb = GetComponent<Rigidbody2D>();
+    scoreController = GameObject.FindWithTag("Score Controller").GetComponent<ScoreController>();
+    Debug.Log("Start: " + gameObject.name + " : " + (scoreController!=null));
   }
 
   void Update () {
@@ -31,5 +35,14 @@ public class CarMovement : MonoBehaviour {
     float sign = Mathf.Sign(transform.InverseTransformVector(rb.velocity).y);
     float turn = moveProp * turnSpeed * movHorizontal * sign * Time.deltaTime;
     rb.MoveRotation (rb.rotation - turn);
+  }
+
+  void OnCollisionEnter2D(Collision2D coll) {
+    /*
+    if (!coll.gameObject.CompareTag("Player")) {
+      Debug.Log("OnCollisionEnter2D: " + gameObject.name + " : " + (scoreController!=null));
+      scoreController.CarHit();
+    }
+    */
   }
 }
