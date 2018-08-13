@@ -64,8 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b35c557ea26154e87945109ee39f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parkedCars: {fileID: 0}
+  parkedCars: {fileID: 114756016859490258}
   customerPrefab: {fileID: 1703703524843462, guid: 3c74589a070e67842ab63c9b3a6b4350,
     type: 2}
-  startDelay: 1
-  spawnDelay: 20
+  startDelay: 20
+  spawnDelay: 10

@@ -374,40 +374,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114792388978765426, guid: 79d264e35ed90c548b1793bd8e09a123,
-        type: 2}
-      propertyPath: parkedCars
-      value: 
-      objectReference: {fileID: 642497841}
-    - target: {fileID: 114792388978765426, guid: 79d264e35ed90c548b1793bd8e09a123,
-        type: 2}
-      propertyPath: customerPrefab
-      value: 
-      objectReference: {fileID: 1703703524843462, guid: 3c74589a070e67842ab63c9b3a6b4350,
-        type: 2}
-    - target: {fileID: 114792388978765426, guid: 79d264e35ed90c548b1793bd8e09a123,
-        type: 2}
-      propertyPath: spawnDelay
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114792388978765426, guid: 79d264e35ed90c548b1793bd8e09a123,
-        type: 2}
-      propertyPath: startDelay
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1129361580758336, guid: 79d264e35ed90c548b1793bd8e09a123, type: 2}
-      propertyPath: m_TagString
-      value: CustomerGenerator
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d264e35ed90c548b1793bd8e09a123, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &642497841 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114756016859490258, guid: 79d264e35ed90c548b1793bd8e09a123,
-    type: 2}
-  m_PrefabInternal: {fileID: 642497840}
-  m_Script: {fileID: 11500000, guid: 3c70f3912306f3846900ed91bb7d7ef8, type: 3}
 --- !u!1001 &1153313288
 Prefab:
   m_ObjectHideFlags: 0
@@ -559,6 +528,16 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 212473520663053728, guid: 2d1bccf034ba14d7cb4a6706da35c9ae,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 20307583
+      objectReference: {fileID: 0}
+    - target: {fileID: 212473520663053728, guid: 2d1bccf034ba14d7cb4a6706da35c9ae,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d1bccf034ba14d7cb4a6706da35c9ae, type: 2}
   m_IsPrefabAsset: 0
@@ -603,6 +582,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1529521556087996, guid: 5d0c9fdbbc8f54bafb91052b1f641250, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212007173508878326, guid: 5d0c9fdbbc8f54bafb91052b1f641250,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1435066445
+      objectReference: {fileID: 0}
+    - target: {fileID: 212007173508878326, guid: 5d0c9fdbbc8f54bafb91052b1f641250,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
