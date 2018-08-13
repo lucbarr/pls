@@ -3,7 +3,6 @@ using UnityEngine;
 public class CarMovement : MonoBehaviour {
   public float speed     = 1f;
   public float turnSpeed = 1f;
-  public float nota;
 
   float movVertical;
   float movHorizontal;
@@ -37,11 +36,8 @@ public class CarMovement : MonoBehaviour {
   }
 
   void OnCollisionEnter2D(Collision2D coll) {
-    /*
-    if (!coll.gameObject.CompareTag("Player")) {
-      Debug.Log("OnCollisionEnter2D: " + gameObject.name + " : " + (scoreController!=null));
+    if (enabled && !coll.gameObject.CompareTag("Player")) {
       scoreController.CarHit();
     }
-    */
   }
 }
