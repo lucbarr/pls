@@ -7,7 +7,7 @@ public class ScoreController : MonoBehaviour {
   public Text bustedText;
 
   void Update () {
-    scoreText.text = "Nota: " + (score/10f);
+    scoreText.text = "score: " + (score/10f);
     if (score <= 0) {
       score = 0;
       bustedText.text = "SE FUDEU";

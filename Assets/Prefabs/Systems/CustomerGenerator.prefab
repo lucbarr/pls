@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4467244546212014}
   - component: {fileID: 114792388978765426}
+  - component: {fileID: 114756016859490258}
   m_Layer: 0
   m_Name: CustomerGenerator
-  m_TagString: Untagged
+  m_TagString: CustomerGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114756016859490258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1129361580758336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c70f3912306f3846900ed91bb7d7ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parkedCars: []
 --- !u!114 &114792388978765426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,5 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b35c557ea26154e87945109ee39f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customerQueue: []
-  parkedCars: {fileID: 0}
+  parkedCars: {fileID: 114756016859490258}
+  customerPrefab: {fileID: 1703703524843462, guid: 3c74589a070e67842ab63c9b3a6b4350,
+    type: 2}
+  startDelay: 20
+  spawnDelay: 10
