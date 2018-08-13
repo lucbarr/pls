@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224908966791982524}
   - component: {fileID: 222617073448318964}
   - component: {fileID: 114384231415165990}
+  - component: {fileID: 114048083991483032}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -247,6 +248,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sideDrag: 20
+--- !u!114 &114048083991483032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317719625232940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 0.5, y: -0.5}
+  m_UseGraphicAlpha: 0
 --- !u!114 &114384231415165990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9843138, g: 0.9843138, b: 0.9843138, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -269,12 +284,12 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 0
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
