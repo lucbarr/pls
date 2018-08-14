@@ -25,11 +25,9 @@ public class CustomerAutoPilot : MonoBehaviour {
 
   bool CanMove() {
     RaycastHit2D hit;
-
     hit = Physics2D.Raycast(frontPoint.position, frontPoint.up, stopDistance, stopMask);
-    if (hit.collider != null) return false;
-
-    return true;
+    Debug.DrawLine(frontPoint.position, frontPoint.position + frontPoint.up * stopDistance);
+    return hit.collider == null;
   }
 
   void Update () {
@@ -46,7 +44,6 @@ public class CustomerAutoPilot : MonoBehaviour {
     }
 
     Vector3 position = spline.GetPoint(progress);
-    Vector3 delta = position - transform.localPosition;
     transform.localPosition = position;
 
     Vector3 target = position + spline.GetDirection(progress);
